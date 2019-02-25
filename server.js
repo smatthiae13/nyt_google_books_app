@@ -3,11 +3,14 @@ const mongoose = require ("mongoose");
 const bodyParser = require ("body-parser");
 const multer = require ("multer");
 const routes = require("./routes");
+const axios = require("axios");
+const mongodb = require("mongodb");
 
 const books = require("./routes/api/books");
 //db Config
 const db = require("./config/keys").mongoURI;
 const app = express();
+//app.use(bodyParser.json());
 const port  = process.env.PORT || 5000;
 
 // bodyParser Middleware
